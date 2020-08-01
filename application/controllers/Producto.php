@@ -3,7 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Producto extends CI_Controller {
 
-	public function ListaDeProductos(string $nombreProducto)
+	public function ListaDeProductos()
 	{
 		//....
 		$this->load->view('Producto/ListaDeProductos');

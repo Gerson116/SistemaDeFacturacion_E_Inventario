@@ -10,7 +10,7 @@ echo "hola mundo";
     <title>pruba</title>
 </head>
 <body>
-    <form method="post" action="Producto/GuardarProducto">
+    <form method="post" action="ListaDeProductos">
         <input type="text" name="nombreProducto">
         <button type="submit">enviar</button>
     </form>
