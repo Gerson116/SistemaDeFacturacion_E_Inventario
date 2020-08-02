@@ -14,15 +14,15 @@
 
 <div class="row justify-content-center">
     <div class="col-md-8">
-    <form action="" method="post">
+    <form action="<?php base_url();?>" method="post">
         <div class="form-group">
             <!-- CUIDADO: ESTE INPUT CONTIENE EL ID DEL PRODUCTO A EDITAR. -->
             <!-- FAVOR NO TOCAR -->
-            <input type="hidden" class="form-control">
+            <input type="hidden" name="id_producto" value="<?php echo $producto_a_editar[0]->id_producto?>" class="form-control">
         </div>
             <div class="form-group">
                 <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" class="form-control" id="">
+                <input type="text" name="nombre" class="form-control" id="" value="<?php echo $producto_a_editar[0]->nombre ?>">
             </div>
             <div class="form-group align-self-end">
                 <a href="<?php base_url(); ?>ListaDeProductos" class="btn btn-danger p-3">Atrás</a>
@@ -33,3 +33,7 @@
         </form>
     </div>
 </div>
+
+<?php
+print_r($producto_a_editar[0]->id_producto);
+?>

@@ -3,7 +3,7 @@
     <div class="col-md-4">
         <h1>
             Listado productos.
-            <button class="btn btn-primary p-3" type="button">Agregar nuevo producto</button>
+            <button class="btn btn-primary p-3" type="button">Nuevo producto</button>
         </h1>
     </div>
 </div>
@@ -13,7 +13,7 @@
 <!-- Esta fila contiene el formulario para agregar nuevos productos. -->
 <div class="row formularioAgregarProducto">
     <div class="col-md-4">
-        <form action="" method="post">
+        <form action="<?php base_url();?>Producto/NuevoProducto" method="post">
             <div class="form-group">
                 <label for="nombre">Nombre del articulo</label>
                 <input type="text" name="nombre" class="form-control" id="">
@@ -37,15 +37,22 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>1250420</td>
-                <td title="Este es el nombre del articulo">Pasta de tomate</td>
-                <td>
-                    <a href="#" class="btn btn-info" title="Productos que poseen este código">i</a>
-                    <a href="<?php base_url();?>EditarProducto" class="btn btn-success" title="Editar el producto">e</a>
-                    <a href="<?php base_url();?>EliminarProducto" class="btn btn-danger" title="Eliminar el producto">d</a>
-                </td>
-            </tr>
+            <?php
+                if ($listadoProducto != null)
+                {
+                    foreach($listadoProducto as $producto)
+                    {
+                        echo '<tr>'
+                        .'<td>'.$producto->id_producto.'</td>'
+                        .'<td>'.$producto->nombre.'</td>'
+                        .'<td>'
+                            . " <a href='../Producto/EditarProducto/$producto->id_producto' class='btn btn-info'>Editar</a> "
+                            . " <a href='../Producto/EliminarProducto/$producto->id_producto' class='btn btn-danger'> Eliminar </a> "
+                        .'</td>'
+                        .'</tr>';
+                    }
+                }
+            ?>
         </tbody>
         </table>
     </div>
