@@ -3,7 +3,7 @@
         <h1>Nuevo proveedor</h1>
     </div>
     <div class="col-md-8">
-        <form action="" method="post">
+        <form action="AgregarProveedor" method="post">
             <div class="form-group">
                 <label for="nombre">Nombre</label>
                 <input type="text" name="nombre" class="form-control" placeholder="Gerson">
@@ -14,7 +14,7 @@
             </div>
             <div class="form-group">
                 <label for="nombre_de_la_empresa">Nombre de la Empresa</label>
-                <input type="text" name="nombreDeLaEmpresa" class="form-control" placeholder="Mi empresa">
+                <input type="text" name="nombre_de_la_empresa" class="form-control" placeholder="Mi empresa">
             </div>
             <div class="form-group">
                 <label for="cedula">Cedula</label>

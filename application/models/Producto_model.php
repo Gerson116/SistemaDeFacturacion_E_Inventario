@@ -7,7 +7,7 @@ class Producto_model extends CI_Model
         //....
         $query = $this->db->query("select * from Producto");
         //...
-        if ($query->num_rows > 0)
+        if ($query->num_rows < 0)
         {
             return null;
         }
