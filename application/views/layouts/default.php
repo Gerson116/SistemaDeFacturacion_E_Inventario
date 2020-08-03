@@ -13,9 +13,9 @@
         <div class="row p-1 filaMenu">
             <!-- Este es el menú -->
             <nav class="nav menu">
-                <a class="nav-link active" href="https://localhost/SistemaDeFacturacion_E_Inventario/Producto">Inicio</a>
-                <a class="nav-link" href="https://localhost/SistemaDeFacturacion_E_Inventario/Proveedor/">Proveedores</a>
-                <a class="nav-link" href="https://localhost/SistemaDeFacturacion_E_Inventario/ComprasDeProductos/">Comprar producto</a>
+                <a class="nav-link active" href="<?php echo base_url();?>Producto/ListaDeProductos">Inicio</a>
+                <a class="nav-link" href="<?php echo base_url();?>Proveedor/ListadoProveedores">Proveedores</a>
+                <a class="nav-link" href="<?php echo base_url();?>ComprasDeProductos/ListadoDeCompras">Comprar producto</a>
             </nav>
         </div>
 

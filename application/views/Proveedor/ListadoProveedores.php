@@ -15,7 +15,7 @@
                 echo "<div class='col-md-3 mt-2'>"
                 ."<div class='card' style='width: 18rem;'>"
                     .'<div class="card-body">'
-                        .'<h5 class="card-title">'.$datosDelProveedor->nombre.' '.$datosDelProveedor->apellido.'</h5>'
+                        .'<h5 class="card-title">'.$datosDelProveedor->nombre.' '.$datosDelProveedor->apellido.' Código#'.$datosDelProveedor->id_proveedor.'</h5>'
                         .'<p>'.'Empresa:'.$datosDelProveedor->nombre_de_la_empresa.'</p>'
                         .'<p>'.'Cedula:'.$datosDelProveedor->cedula.'</p>'
                         ."<a href='../Proveedor/EditarProveedor/$datosDelProveedor->id_proveedor' class='card-link btn btn-info'>".'Editar'.'</a>'
