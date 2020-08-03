@@ -13,7 +13,7 @@
 <!-- Esta fila contiene el formulario para agregar nuevos productos. -->
 <div class="row formularioAgregarProducto">
     <div class="col-md-4">
-        <form action="<?php base_url();?>Producto/NuevoProducto" method="post">
+        <form action="<?php echo base_url();?>Producto/NuevoProducto" method="post">
             <div class="form-group">
                 <label for="nombre">Nombre del articulo</label>
                 <input type="text" name="nombre" class="form-control" id="">
