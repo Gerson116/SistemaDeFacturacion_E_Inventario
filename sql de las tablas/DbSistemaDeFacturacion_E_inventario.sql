@@ -1,0 +1,1 @@
+CREATE DATABASE DbSistemaDeFacturacion_E_Inventario;
