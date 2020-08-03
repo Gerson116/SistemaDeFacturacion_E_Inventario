@@ -16,7 +16,7 @@
         <form action="<?php echo base_url();?>Producto/NuevoProducto" method="post">
             <div class="form-group">
                 <label for="nombre">Nombre del articulo</label>
-                <input type="text" name="nombre" class="form-control" id="">
+                <input type="text" name="nombre" class="form-control" id="" required>
             </div>
             <div class="form-group">
                 <button class="btn btn-success btn-block p-3" type="submit" title="Se agregara un nuevo producto al sistema.">Guardar</button>

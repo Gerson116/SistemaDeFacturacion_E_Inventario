@@ -16,6 +16,7 @@
                 ."<div class='card' style='width: 18rem;'>"
                     .'<div class="card-body">'
                         .'<h5 class="card-title"> Fecha:'.$compras->fecha_de_compra.'Id_Cliente: '.$compras->id_proveedor_fk_compra_de_producto.'</h5>'
+                        .'<p>'.'Id del producto: '.$compras->id_producto_fk_compra_de_producto.'</p>'
                         .'<p>'.'Cantidad exacta de compra: '.$compras->cantidad_exacta.'</p>'
                         .'<p>'.'Cantidad por lb de compra:'.$compras->cantidad_por_libra.'</p>'
                         .'<p>'.'Monto total:'.$compras->monto_total.'</p>'

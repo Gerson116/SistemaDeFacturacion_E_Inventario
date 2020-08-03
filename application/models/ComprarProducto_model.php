@@ -34,11 +34,11 @@ class ComprarProducto_model extends CI_Model
         }
         else{ $monto_total = $cantidad_por_libra * $monto_por_unidad_o_kilo; }
         $nueva_compra = array(
-            'id_producto_fk_compra_de_producto' => $id_compra_de_producto,
+            'id_producto_fk_compra_de_producto' => $id_producto_fk_compra_de_producto,
             'id_proveedor_fk_compra_de_producto' => $id_proveedor_fk_compra_de_producto,
             'cantidad_exacta' => $cantidad_exacta,
             'cantidad_por_libra' => $cantidad_por_libra,
-            'fecha_de_compra' => date("m.d.y"),
+            'fecha_de_compra' => date("y.m.d"),
             'monto_por_unidad_o_kilo' => $monto_por_unidad_o_kilo,
             'monto_total' => $monto_total
         );

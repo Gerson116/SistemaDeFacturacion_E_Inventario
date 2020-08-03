@@ -22,10 +22,10 @@
         </div>
             <div class="form-group">
                 <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" class="form-control" id="" value="<?php echo $producto_a_editar[0]->nombre ?>">
+                <input type="text" name="nombre" class="form-control" id="" value="<?php echo $producto_a_editar[0]->nombre ?>" required>
             </div>
             <div class="form-group align-self-end">
-                <a href="<?php base_url(); ?>ListaDeProductos" class="btn btn-danger p-3">Atrás</a>
+                <a href="<?php echo base_url(); ?>ListaDeProductos" class="btn btn-danger p-3">Atrás</a>
                 <button class="btn btn-success p-3" type="submit" title="NOTA: El producto sera editado.">
                     Editar nuevo producto
                 </button>

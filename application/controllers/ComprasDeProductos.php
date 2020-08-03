@@ -21,7 +21,7 @@ class ComprasDeProductos extends CI_Controller
             $this->load->model('ComprarProducto_model','compras');
 
             $listado_de_compras = $this->compras->NuevaCompra(
-               $_POST['id_producto_fk_compra_de_producto'], $_POST['id_producto_fk_compra_de_producto'], 
+               $_POST['id_producto_fk_compra_de_producto'], $_POST['id_proveedor_fk_compra_de_producto'], 
                $_POST['cantidad_exacta'], $_POST['cantidad_por_libra'], $_POST['monto_por_unidad_o_kilo']
             );
             $url= base_url()."ComprasDeProductos/ListadoDeCompras";
