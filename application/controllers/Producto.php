@@ -44,7 +44,8 @@ class Producto extends CI_Controller {
 			if ($datosDelProducto != null)
 			{
 				$url_a_redireccionar = base_url().'Producto';
-				header("Location: $url_a_redireccionar");
+				redirect('ListaDeProductos');
+				//header("Location: $url_a_redireccionar");
 			}
 		}
 	}
