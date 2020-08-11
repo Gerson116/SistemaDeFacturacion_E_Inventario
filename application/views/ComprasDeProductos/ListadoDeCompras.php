@@ -1,3 +1,7 @@
+<?php
+    include 'ModalEliminarCompra.php';
+?>
+
 <div class="row mt-3">
     <div class="col">
         <a href="<?php base_url();?>../ComprasDeProductos/RealizarCompra" class="btn btn-primary p-3">Realizar compra</a>
@@ -34,7 +38,7 @@
                             .'<td>'.$compras->monto_por_unidad_o_kilo.'</td>'
                             .'<td>'.$compras->monto_total.'</td>'
                             .'<td>'
-                                . " <button type='button' id='eliminarCompraDeProducto' onclick=eliminarCompraDeProducto($compras->id_compra_de_producto) class='btn btn-danger' data-toggle='modal' data-target='#modalMensajeEliminarCompra'> Eliminar </button> " // data-toggle='modal' data-target='#modalMensajeEliminar'
+                                . "<button type='button' id='eliminarCompraDeProducto' onclick=eliminarCompraDeProducto($compras->id_compra_de_producto) class='btn btn-danger' data-toggle='modal' data-target='#modalMensajeEliminarCompra'> Eliminar </button> "
                             .'</td>'
                             .'</tr>';
                         }

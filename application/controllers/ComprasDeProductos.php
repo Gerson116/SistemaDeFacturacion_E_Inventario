@@ -39,9 +39,24 @@ class ComprasDeProductos extends CI_Controller
         //...
         $this->load->model('Proveedor_model','proveedor');
         $comprobar_existencia = $this->compras->FiltrarCompra($id_compra);
+
+		$datosEliminadosConExito['Eliminado'] = array(
+			'respuesta'=>true
+		);
+		$datosNoEliminados['noEliminado'] = array(
+			'respuesta'=>false
+        );
+        
         if ($comprobar_existencia != null)
         {
             $this->compras->EliminarCompra($id_compra);
+            echo json_encode($datosEliminadosConExito);
+            exit();
+        }
+        else
+        {
+            echo json_encode($datosNoEliminados);
+            exit();
         }
         // $url= base_url()."ComprasDeProductos/ListadoDeCompras";
         // header("Location: $url");

@@ -41,16 +41,17 @@ var confirmandoDeseaEliminar = $('#confirmandoDeseaEliminar').click(function(){
         console.log(jsonRespuesta.Eliminado.respuesta);
         $('#modalMensajeEliminar').modal('hide');
 
-        setTimeout( function(){
-            swal({
-                title: "Datos eliminados",
-                text: "Fue eliminado con exito este producto",
-                icon: "success",
-                button: "ok"
-            });
 
-            $('#tablaProducto').DataTable().ajax.reload();
-        }, 300);
+        swal({
+            title: "Datos eliminados",
+            text: "Fue eliminado con exito este producto",
+            icon: "success",
+            button: "ok"
+        });
+
+        setTimeout( function(){
+            location.reload();
+        }, 1500);
     });
 });
 
