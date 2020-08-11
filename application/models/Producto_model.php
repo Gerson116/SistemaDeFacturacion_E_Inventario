@@ -2,15 +2,18 @@
 class Producto_model extends CI_Model
 {
     // Este modelo trabaja la tabla producto.
-    public function ListadoProductos() : array
+    public function ListadoProductos()
     {
         //....
-        $query = $this->db->query("select * from Producto");
+        $this->db->select("*");
+        $this->db->from("Producto");
+        $query = $this->db->get();
         //...
         if ($query->num_rows < 0)
         {
             return null;
         }
+        // $jsonProductos["datosDeLosProductos"] = $query->result();
         return $query->result();
     }
 

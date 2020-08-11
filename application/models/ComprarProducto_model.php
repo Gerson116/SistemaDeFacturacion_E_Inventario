@@ -4,7 +4,9 @@ class ComprarProducto_model extends CI_Model
     public function ListarCompra()
     {
         //...
-        $query = $this->db->query("select * from CompraDeProductos");
+        $this->db->select('*');
+        $this->db->from('CompraDeProductos');
+        $query = $this->db->get();
         if ($query->num_rows < 0)
         {
             return null;
@@ -49,7 +51,7 @@ class ComprarProducto_model extends CI_Model
     public function EliminarCompra(int $id_compra_de_producto)
     {
         //...
-        $this->db->query("delete from CompraDeProductos where id_compra_de_producto = $id_compra_de_producto");
+        //$this->db->query("delete from CompraDeProductos where id_compra_de_producto = $id_compra_de_producto");
     }
 }
 ?>

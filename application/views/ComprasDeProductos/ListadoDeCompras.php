@@ -7,23 +7,40 @@
 <hr>
 
 <div class="row mt-3">
-    <?php
-        if($listado_de_compras != null)
-        {
-            foreach($listado_de_compras as $compras)
-            {
-                echo "<div class='col-md-3 mt-2'>"
-                ."<div class='card' style='width: 18rem;'>"
-                    .'<div class="card-body">'
-                        .'<h5 class="card-title"> Fecha:'.$compras->fecha_de_compra.'Id_Cliente: '.$compras->id_proveedor_fk_compra_de_producto.'</h5>'
-                        .'<p>'.'Id del producto: '.$compras->id_producto_fk_compra_de_producto.'</p>'
-                        .'<p>'.'Cantidad exacta de compra: '.$compras->cantidad_exacta.'</p>'
-                        .'<p>'.'Cantidad por lb de compra:'.$compras->cantidad_por_libra.'</p>'
-                        .'<p>'.'Monto total:'.$compras->monto_total.'</p>'
-                        ."<a href='../ComprasDeProductos/EliminarCompra/$compras->id_compra_de_producto' class='card-link btn btn-danger'>".'Eliminar'.'</a>'
-                    .'</div>'
-                ."</div>"."</div>";
-            }
-        }
-    ?>
+    <div class="col">
+        <table class="table" id="tablaCompraDeProducto">
+            <thead>
+                <tr>
+                    <th>Id Proveedor</th>
+                    <th>Id producto</th>
+                    <th>Cantidad exacta</th>
+                    <th>Cantidad en lb</th>
+                    <th>Monto por kilo o unidad</th>
+                    <th>Monto total</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                    if($listado_de_compras != null)
+                    {
+                        foreach($listado_de_compras as $compras)
+                        {
+                            echo '<tr>'
+                            .'<td>'.$compras->id_proveedor_fk_compra_de_producto.'</td>'
+                            .'<td>'.$compras->id_compra_de_producto.'</td>'
+                            .'<td>'.$compras->cantidad_exacta.'</td>'
+                            .'<td>'.$compras->cantidad_por_libra.'</td>'
+                            .'<td>'.$compras->monto_por_unidad_o_kilo.'</td>'
+                            .'<td>'.$compras->monto_total.'</td>'
+                            .'<td>'
+                                . " <button type='button' id='eliminarCompraDeProducto' onclick=eliminarCompraDeProducto($compras->id_compra_de_producto) class='btn btn-danger' data-toggle='modal' data-target='#modalMensajeEliminarCompra'> Eliminar </button> " // data-toggle='modal' data-target='#modalMensajeEliminar'
+                            .'</td>'
+                            .'</tr>';
+                        }
+                    }
+                ?>
+            </tbody>
+        </table>
+    </div>
 </div>
